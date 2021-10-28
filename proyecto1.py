@@ -28,6 +28,7 @@ def cargar2():
     codigo=leerArchivo(direccion)
     scanner = AnalizadorLexico()
     listaTokens=scanner.analizar(codigo)
+    #scanner.imprimirToken()
     parser = AnalizadorSintactico()
     parser.analizar(listaTokens)
     

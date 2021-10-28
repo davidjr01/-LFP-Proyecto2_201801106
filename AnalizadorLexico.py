@@ -104,8 +104,7 @@ class AnalizadorLexico:
                 elif c == centinela:
                     self.listaTokens.append(Token('$', 'EOF', linea, columna))
 
-                    messagebox.showinfo(title="TODO BIEN, TODO CORRECTO!",
-                                        message='El archivo fue analizado correctamete.')
+                    messagebox.showinfo(message='El archivo fue analizado correctamete.')
                     break
                 else:
                     buffer += c
