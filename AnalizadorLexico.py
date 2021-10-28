@@ -222,5 +222,15 @@ class AnalizadorLexico:
             lineaa=str(p.linea )+ ""
             columnaa=str(p.columna)+""
             print("Lexema: " + p.lexema+"    Tipo:  "  + p.tipo+"   Linea  " + lineaa+"   Columna:   " + columnaa+"\n" )
+            archivo.write("<tr> <th> " + p.lexema+"</th>" +"<th> " + p.tipo+"</th>"  +"<th> " + lineaa+"</th>" +"<th> " + columnaa+"</th>"+  "</tr>\n" )
+        archivo.close()
+
+        archivo2 = open('error.txt', 'w')
+        for t in self.listaErrores:
+            lineaa=str(t.linea )+ ""
+            columnaa=str(t.columna)+""
+            archivo2.write("<tr> <th> " + t.descripcion+"</th>" +"<th> " + t.tipo+"</th>"  +"<th> " + lineaa+"</th>" +"<th> " + columnaa+"</th>"+  "</tr>\n")
+
+        archivo2.close()
         
 

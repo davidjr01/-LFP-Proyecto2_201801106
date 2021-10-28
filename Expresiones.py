@@ -1,3 +1,9 @@
+from graphviz import Graph
+dot=Graph('Ast','png')
+dot.format='png'
+dot.attr(splines='false')
+dot.node_attr.update(shape='circle')
+dot.edge_attr.update(color='blue')
 class ExpresionIdentificador() :
     def __init__(self, id) :
         self.id = id

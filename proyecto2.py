@@ -12,13 +12,14 @@ from PIL import Image,ImageTk
 from tkinter import messagebox
 from tkinter import scrolledtext
 from Instrucciones import *
+from PP import PP1
 
 
 
 
 ventana=Tk()
 
-
+listaD=[]
 def leerArchivo(ruta):
     archivo = open(ruta, 'r')
     contenido = archivo.read()
@@ -51,19 +52,50 @@ def btCargar():
     txt.insert(INSERT,codigo)
 
 def btAnalizar():
-    listaTokens=[]
     txt2.delete("1.0", tk.END)
     codigo2=txt.get("1.0",tk.END) ##para obtener texto de un textarea
     scanner = AnalizadorLexico()
     listaTokens=scanner.analizar(codigo2)
-    #scanner.imprimirToken()
+    listaD=listaTokens
+    scanner.imprimirToken()
     parser = AnalizadorSintactico()
     parser.analizar(listaTokens)
     asdf=Debugg()
     txt2.insert(INSERT,asdf.Documento())
     txt2.configure(state='disabled')
    
+def tokens():
+   
+ 
+    inicio=PP1.primera
+    final1=PP1.segunda
+    tabla1=PP1.titulotabla1
+    tabla12=PP1.titulotabla122
+    tabla2=PP1.titultabla2
+    tablax="."
 
+    archivo = open("tokens.txt", 'r')
+    contenido = archivo.read()
+    archivo.close()
+
+    archivo2 = open("error.txt", 'r')
+    contenido2 = archivo2.read()
+    archivo2.close()
+   
+
+    
+    pagina=open("inicio2.html","w")
+    pagina.write(inicio  +tabla1+contenido+tabla2 + tabla12 +contenido2+tabla2 +final1)
+
+
+    pagina.close()
+    try:
+        os.startfile("inicio2.html")
+    except Exception:
+        print ("no se encontro")
+
+def arbol():
+    pass
 
 anchoventana=int(1070)
 largoventana=int(750)
@@ -76,9 +108,13 @@ ventana.resizable(False,False)
 
 
 #FRAMES ---------------
-mframe=Frame(ventana,width=350 ,height=60)
+mframe=Frame(ventana,width=485 ,height=60)
 mframe.config(bg="#ABB2B9")
-mframe.place(x=700,y=15)
+mframe.place(x=20,y=15)
+
+mframe1=Frame(ventana,width=485 ,height=60)
+mframe1.config(bg="#ABB2B9")
+mframe1.place(x=545,y=15)
 
 linea=Frame(ventana,width=1030 ,height=5)
 linea.config(bg="black")
@@ -103,16 +139,23 @@ txt2.grid(column=0,row=0)
 #BOTONES  ---------------
 
 boton1=Button(mframe,text="CARGAR",command=btCargar)
-boton1.place(x=10,y=10,width=60,height=30)
+boton1.place(x=20,y=15,width=60,height=30)
 
 boton2=Button(mframe,text="ANALIZAR",command=btAnalizar)
-boton2.place(x=80,y=10,width=65,height=30)
+boton2.place(x=150,y=15,width=65,height=30)
 
-boton2=Button(mframe,text="REPORTES")
-boton2.place(x=155,y=10,width=65,height=30)
+
 
 boton2=Button(mframe,text="SALIR",command=salir)
-boton2.place(x=240,y=10,width=65,height=30)
+boton2.place(x=290,y=15,width=65,height=30)
+
+
+boton1=Button(mframe1,text="REPORTE TOKENS Y ERRORES ",command=tokens)
+boton1.place(x=60,y=15,width=200,height=30)
+
+boton2=Button(mframe1,text="ARBOL",command=arbol)
+boton2.place(x=320,y=15,width=80,height=30)
+
 
 
 
