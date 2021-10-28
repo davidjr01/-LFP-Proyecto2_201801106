@@ -2,6 +2,8 @@ from Token import Token
 from Error import Error
 import re
 from tkinter import messagebox
+
+
 class AnalizadorLexico:
     def __init__(self):
         self.listaTokens = []
