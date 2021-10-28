@@ -1,5 +1,6 @@
 from Expresiones import *
 
+documento=""
 
 class IntruccionMin() :
     def __init__(self, expresion) :
@@ -14,9 +15,11 @@ class IntruccionMin() :
                     temp = valor[i]
                     valor[i] = valor[i+1]
                     valor[i+1] = temp
-
+        global documento
         print()
         print(valor[0])
+        documento=documento+"\n"
+        documento=documento+ str(valor[0]) +"\n"
         
 
 class IntruccionMax() :
@@ -24,6 +27,7 @@ class IntruccionMax() :
         self.expresion = expresion
 
     def ejecutar(self, entorno):
+        global documento
         valor = self.expresion.getValor(entorno)
 
         for n in range(len(valor)-1,0,-1):
@@ -37,6 +41,9 @@ class IntruccionMax() :
         pos=len(valor)-1
         print(valor[pos])
 
+        documento=documento +"\n"
+        documento=documento+ str(valor[pos]) +"\n"
+
 class IntruccionSumar() :
     def __init__(self, expresion) :
         self.expresion = expresion
@@ -45,6 +52,9 @@ class IntruccionSumar() :
         valor = self.expresion.getValor(entorno)
         print()
         print(valor)
+        global documento
+        documento=documento +"\n"
+        documento=documento+ str(valor) +"\n"
 
 
 class IntruccionDatos() :
@@ -52,14 +62,17 @@ class IntruccionDatos() :
         self.expresion = expresion
 
     def ejecutar(self, entorno):
+        global documento
         valor = self.expresion.getValor(entorno)
         print()
+        documento=documento +"\n"
         datos=""
         tamaño=len(valor[0])
         for i in valor:
             for j in range(tamaño):
                 datos+=str(i[j])+ "\t"
             print(datos)
+            documento=documento+ str(datos) +"\n"
             datos=""
         
 
@@ -68,34 +81,45 @@ class IntruccionPromedio() :
         self.expresion = expresion
 
     def ejecutar(self, entorno):
+        global documento
         valor = self.expresion.getValor(entorno)
         print()
         print(valor)
+        documento=documento +"\n"
+        documento=documento+ str(valor) +"\n"
 
 class IntruccionConteo() :
     def __init__(self, expresion) :
         self.expresion = expresion
 
     def ejecutar(self, entorno):
+        global documento
         valor = self.expresion.getValor(entorno)
         print(valor)
+        documento=documento +"\n"
+        documento=documento+ str(valor) +"\n"
 
 class IntruccionImprimirln() :
     def __init__(self, expresion) :
         self.expresion = expresion
 
     def ejecutar(self, entorno):
+        global documento
         valor = self.expresion.getValor(entorno)
         print()
         print(valor)
+        documento=documento +"\n"
+        documento=documento+ str(valor) +"\n"
 
 class IntruccionImprimir() :
     def __init__(self, expresion) :
         self.expresion = expresion
 
     def ejecutar(self, entorno):
+        global documento
         valor = self.expresion.getValor(entorno)
         print(valor,end="")
+        documento=documento+ str(valor) 
 
 class IntruccionInstruccion() :
     def __init__(self, instruccion) :
@@ -132,3 +156,12 @@ class IntruccionInicio() :
 
     def ejecutar(self, entorno):
         self.lista.ejecutar(entorno)
+
+
+class Debugg() :
+
+    def Documento(self):
+        global documento
+        documento2=documento
+        documento=""
+        return documento2

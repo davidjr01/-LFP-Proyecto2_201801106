@@ -29,11 +29,25 @@ Registros = [
 	{11, "Cafe en sobre", 15.00, 18.00, 0}
 	{12, "1/2 litro de agua pura", 14.00, 16.00, 4}
 ]
-promedio("stock");
+
 imprimirln("/***** ***** ***** Conteo ***** ***** *****\");
 conteo();
-max("stock");
-min("stock");
+
+imprimirln("/***** ***** ***** Promedio ***** ***** *****\");
+promedio("stock");
+
+
+imprimirln("/***** ***** ***** Datos ***** ***** *****\");
+datos();
+
+imprimirln("/***** ***** ***** Sumar ***** ***** *****\");
+sumar("stock");
+
+imprimirln("/***** ***** ***** Maximo ***** ***** *****\");
+max("precio_venta");
+
+imprimirln("/***** ***** ***** Minimo ***** ***** *****\");
+min("precio_compra");
 
 
 
