@@ -1,7 +1,6 @@
-imprimir("/***** ***** ***** ");
+imprimir("***** ***** ***** ");
 imprimir("Claves");
-imprimir(" ***** ***** *****\");
-
+imprimir(" ***** ***** *****");
 
 
 Claves = [
@@ -9,10 +8,9 @@ Claves = [
 	"precio_venta", "stock"
 ]
 
-imprimir("/***** ***** ***** ");
+imprimir("***** ***** ***** ");
 imprimir("Registros");
-imprimir(" ***** ***** *****\");
-
+imprimir(" ***** ***** *****");
 
 
 Registros = [
@@ -30,25 +28,21 @@ Registros = [
 	{12, "1/2 litro de agua pura", 14.00, 16.00, 4}
 ]
 
-imprimirln("/***** ***** ***** Conteo ***** ***** *****\");
+imprimirln("***** ***** ***** Conteo ***** ***** *****");
 conteo();
 
-imprimirln("/***** ***** ***** Promedio ***** ***** *****\");
+imprimirln("/***** ***** ***** Promedio ***** ***** *****");
 promedio("stock");
 
 
-imprimirln("/***** ***** ***** Datos ***** ***** *****\");
+imprimirln("***** ***** ***** Datos ***** ***** *****");
 datos();
 
-imprimirln("/***** ***** ***** Sumar ***** ***** *****\");
+imprimirln("***** ***** ***** Sumar ***** ***** *****");
 sumar("stock");
 
-imprimirln("/***** ***** ***** Maximo ***** ***** *****\");
+imprimirln("***** ***** ***** Maximo ***** ***** *****");
 max("precio_venta");
 
-imprimirln("/***** ***** ***** Minimo ***** ***** *****\");
+imprimirln("***** ***** ***** Minimo ***** ***** *****");
 min("precio_compra");
-
-
-
-

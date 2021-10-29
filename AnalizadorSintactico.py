@@ -10,6 +10,7 @@ class AnalizadorSintactico:
         self.listaTokens = []
         self.i = 0
         self.listaDatos=[]
+        self.listaValores=[]
         self.listaTemp=[]
 
 
@@ -75,17 +76,22 @@ class AnalizadorSintactico:
                     self.i+=1
                     self.lista_registros()
                     if self.listaTokens[self.i].tipo=='corchetec': 
+                        expresion=ExpresionLiteral("lista",self.listaDatos)
                         self.i+=1
+                        return IntruccionRegistro(expresion)
+
                         
 
 ################claves##########################################################################
     def val_clave(self):
+        
         if self.listaTokens[self.i].tipo=='llavec': 
             self.i+=1
         elif self.listaTokens[self.i].tipo=='cadena':  # de aca es donde se toman los datos
             lexema=str(self.listaTokens[self.i].lexema)
             lexema=lexema.replace('"','')
             self.listaTemp.append(lexema)
+            self.listaValores.append(lexema)
             self.i+=1
         else:
             pass
@@ -119,8 +125,10 @@ class AnalizadorSintactico:
                     if self.listaTokens[self.i].tipo=='corchetec':  ##aca se deja de leer los datos de valor
                         self.listaDatos.append(self.listaTemp)
                         self.listaTemp=[]
+                        expresion=ExpresionLiteral("cadena",self.listaValores)
                         ##print(self.listaDatos)
                         self.i+=1
+                        return IntruccionValores(expresion)
 
 ################## immpirmir ####################################################################
     def val_imp(self):
@@ -190,6 +198,7 @@ class AnalizadorSintactico:
         if self.listaTokens[self.i].tipo=='cadena':  # de aca es donde se toman los datos
             campo=str(self.listaTokens[self.i].lexema)
             campo=campo.replace('"','')
+
             itempo=-1
             index=0
             for i in self.listaDatos[0]:
@@ -206,8 +215,10 @@ class AnalizadorSintactico:
             
             promedio2=promedio/(len(self.listaDatos)-1)
 
+            cadenaPromedio=self.listaTokens[self.i].lexema +","+str(promedio2)
 
-            expresion=ExpresionLiteral("cadena",promedio2)
+
+            expresion=ExpresionLiteral("cadena",cadenaPromedio)
             self.i+=1
             return expresion
                 
@@ -262,7 +273,9 @@ class AnalizadorSintactico:
                 if tope>1:
                     promedio=promedio+float(i[index])
             
-            expresion=ExpresionLiteral("cadena",promedio)
+            cadSuma=self.listaTokens[self.i].lexema+","+str(promedio)
+            
+            expresion=ExpresionLiteral("cadena",cadSuma)
             self.i+=1
             return expresion
                 
@@ -299,7 +312,7 @@ class AnalizadorSintactico:
                 tope=tope+1
                 if tope>1:
                     ldatos.append(float(i[index]))
-            
+            ldatos.append(self.listaTokens[self.i].lexema)
             expresion=ExpresionLiteral("cadena",ldatos)
             self.i+=1
             return expresion
@@ -337,6 +350,8 @@ class AnalizadorSintactico:
                 if tope>1:
                     ldatos.append(float(i[index]))
             
+            ldatos.append(self.listaTokens[self.i].lexema)
+            
             expresion=ExpresionLiteral("cadena",ldatos)
             self.i+=1
             return expresion
@@ -356,9 +371,11 @@ class AnalizadorSintactico:
 #################################################################################################
     def instrucciones(self):  ##############aca se modifica para instrucciones clase
         if self.listaTokens[self.i].tipo=='registros': 
-            self.ins_registros()
+            ins=self.ins_registros()
+            return IntruccionInstruccion(ins)
         if self.listaTokens[self.i].tipo=='claves': 
-            self.ins_claves()
+            ins=self.ins_claves()
+            return IntruccionInstruccion(ins)
 
         if self.listaTokens[self.i].tipo=='imprimir': 
             ins=self.ins_imprimir()
@@ -400,13 +417,16 @@ class AnalizadorSintactico:
             ins=self.ins_exportarReporte()
             return IntruccionInstruccion(ins)
 
-
+    def epsilon(self):
+        return InstruccionEpsilon()
 
     def lista_instrucciones2(self): ##de aca deriban todas las intrucciones
         
         if self.listaTokens[self.i].tipo=='EOF':
             print("analisis sintactico exitoso")
-            return None
+            ins=self.epsilon()
+            return IntruccionListaInstrucciones2(ins,[])
+
         elif self.listaTokens[self.i].tipo=='registros' or self.listaTokens[self.i].tipo=='claves' or  self.listaTokens[self.i].tipo=='imprimir' or self.listaTokens[self.i].tipo=='imprimirln' or self.listaTokens[self.i].tipo=='conteo' or self.listaTokens[self.i].tipo=='promedio'or self.listaTokens[self.i].tipo=='contarsi' or self.listaTokens[self.i].tipo=='datos' or self.listaTokens[self.i].tipo=='sumar' or self.listaTokens[self.i].tipo=='max' or self.listaTokens[self.i].tipo=='min' or self.listaTokens[self.i].tipo=='exportarReporte':    
             ins=self.instrucciones()
             lista=self.lista_instrucciones2()
@@ -442,5 +462,6 @@ class AnalizadorSintactico:
         self.listaTokens=listaTokens
         arbolIns=self.inicio()
         arbolIns.ejecutar({})
+        arbolIns.getNodos()
       
         

@@ -1,0 +1,697 @@
+// png
+graph Ast {
+	node [shape=circle]
+	edge [color=blue]
+	splines=false
+	1 [label=INICIO]
+	2 [label=LISTAINSTRUCCIONES]
+	3 [label=INSTRUCCION]
+	4 [label=INS_IMPRIMIR]
+	5 [label=imprimir]
+	6 [label="("]
+	7 [label=expresion]
+	8 [label=literal]
+	9 [label="***** ***** ***** "]
+	8 -- 9
+	7 -- 8
+	10 [label=")"]
+	11 [label=";"]
+	4 -- 5
+	4 -- 6
+	4 -- 7
+	4 -- 10
+	4 -- 11
+	3 -- 4
+	2 -- 3
+	12 [label=LISTAINSTRUCCIONES]
+	13 [label=INSTRUCCION]
+	14 [label=INS_IMPRIMIR]
+	15 [label=imprimir]
+	16 [label="("]
+	17 [label=expresion]
+	18 [label=literal]
+	19 [label=Claves]
+	18 -- 19
+	17 -- 18
+	20 [label=")"]
+	21 [label=";"]
+	14 -- 15
+	14 -- 16
+	14 -- 17
+	14 -- 20
+	14 -- 21
+	13 -- 14
+	12 -- 13
+	22 [label=LISTAINSTRUCCIONES]
+	23 [label=INSTRUCCION]
+	24 [label=INS_IMPRIMIR]
+	25 [label=imprimir]
+	26 [label="("]
+	27 [label=expresion]
+	28 [label=literal]
+	29 [label=" ***** ***** *****"]
+	28 -- 29
+	27 -- 28
+	30 [label=")"]
+	31 [label=";"]
+	24 -- 25
+	24 -- 26
+	24 -- 27
+	24 -- 30
+	24 -- 31
+	23 -- 24
+	22 -- 23
+	32 [label=LISTAINSTRUCCIONES]
+	33 [label=INSTRUCCION]
+	34 [label=INS_CLAVE]
+	35 [label=Claves]
+	36 [label="="]
+	37 [label="["]
+	38 [label=lista_Claves]
+	39 [label="]"]
+	34 -- 35
+	34 -- 36
+	34 -- 37
+	34 -- 38
+	34 -- 39
+	40 [label=codigo]
+	41 [label=","]
+	38 -- 40
+	38 -- 41
+	42 [label=producto]
+	43 [label=","]
+	38 -- 42
+	38 -- 43
+	44 [label=precio_compra]
+	45 [label=","]
+	38 -- 44
+	38 -- 45
+	46 [label=precio_venta]
+	47 [label=","]
+	38 -- 46
+	38 -- 47
+	48 [label=stock]
+	38 -- 48
+	33 -- 34
+	32 -- 33
+	49 [label=LISTAINSTRUCCIONES]
+	50 [label=INSTRUCCION]
+	51 [label=INS_IMPRIMIR]
+	52 [label=imprimir]
+	53 [label="("]
+	54 [label=expresion]
+	55 [label=literal]
+	56 [label="***** ***** ***** "]
+	55 -- 56
+	54 -- 55
+	57 [label=")"]
+	58 [label=";"]
+	51 -- 52
+	51 -- 53
+	51 -- 54
+	51 -- 57
+	51 -- 58
+	50 -- 51
+	49 -- 50
+	59 [label=LISTAINSTRUCCIONES]
+	60 [label=INSTRUCCION]
+	61 [label=INS_IMPRIMIR]
+	62 [label=imprimir]
+	63 [label="("]
+	64 [label=expresion]
+	65 [label=literal]
+	66 [label=Registros]
+	65 -- 66
+	64 -- 65
+	67 [label=")"]
+	68 [label=";"]
+	61 -- 62
+	61 -- 63
+	61 -- 64
+	61 -- 67
+	61 -- 68
+	60 -- 61
+	59 -- 60
+	69 [label=LISTAINSTRUCCIONES]
+	70 [label=INSTRUCCION]
+	71 [label=INS_IMPRIMIR]
+	72 [label=imprimir]
+	73 [label="("]
+	74 [label=expresion]
+	75 [label=literal]
+	76 [label=" ***** ***** *****"]
+	75 -- 76
+	74 -- 75
+	77 [label=")"]
+	78 [label=";"]
+	71 -- 72
+	71 -- 73
+	71 -- 74
+	71 -- 77
+	71 -- 78
+	70 -- 71
+	69 -- 70
+	79 [label=LISTAINSTRUCCIONES]
+	80 [label=INSTRUCCION]
+	81 [label=INS_REGISTRO]
+	82 [label=Registros]
+	83 [label="="]
+	84 [label="["]
+	85 [label=lista_Registros]
+	86 [label="]"]
+	81 -- 82
+	81 -- 83
+	81 -- 84
+	81 -- 85
+	81 -- 86
+	87 [label="{"]
+	85 -- 87
+	88 [label=Lista_ValoresRegistro]
+	85 -- 88
+	89 [label=1]
+	88 -- 89
+	90 [label=","]
+	88 -- 90
+	91 [label="\"Barbacoa\""]
+	88 -- 91
+	92 [label=","]
+	88 -- 92
+	93 [label=10.50]
+	88 -- 93
+	94 [label=","]
+	88 -- 94
+	95 [label=20.00]
+	88 -- 95
+	96 [label=","]
+	88 -- 96
+	97 [label=6]
+	88 -- 97
+	98 [label="}"]
+	85 -- 98
+	99 [label="{"]
+	85 -- 99
+	100 [label=Lista_ValoresRegistro]
+	85 -- 100
+	101 [label=2]
+	100 -- 101
+	102 [label=","]
+	100 -- 102
+	103 [label="\"Salsa\""]
+	100 -- 103
+	104 [label=","]
+	100 -- 104
+	105 [label=13.00]
+	100 -- 105
+	106 [label=","]
+	100 -- 106
+	107 [label=16.00]
+	100 -- 107
+	108 [label=","]
+	100 -- 108
+	109 [label=7]
+	100 -- 109
+	110 [label="}"]
+	85 -- 110
+	111 [label="{"]
+	85 -- 111
+	112 [label=Lista_ValoresRegistro]
+	85 -- 112
+	113 [label=3]
+	112 -- 113
+	114 [label=","]
+	112 -- 114
+	115 [label="\"Mayonesa\""]
+	112 -- 115
+	116 [label=","]
+	112 -- 116
+	117 [label=15.00]
+	112 -- 117
+	118 [label=","]
+	112 -- 118
+	119 [label=18.00]
+	112 -- 119
+	120 [label=","]
+	112 -- 120
+	121 [label=8]
+	112 -- 121
+	122 [label="}"]
+	85 -- 122
+	123 [label="{"]
+	85 -- 123
+	124 [label=Lista_ValoresRegistro]
+	85 -- 124
+	125 [label=4]
+	124 -- 125
+	126 [label=","]
+	124 -- 126
+	127 [label="\"Mostaza\""]
+	124 -- 127
+	128 [label=","]
+	124 -- 128
+	129 [label=14.00]
+	124 -- 129
+	130 [label=","]
+	124 -- 130
+	131 [label=16.00]
+	124 -- 131
+	132 [label=","]
+	124 -- 132
+	133 [label=4]
+	124 -- 133
+	134 [label="}"]
+	85 -- 134
+	135 [label="{"]
+	85 -- 135
+	136 [label=Lista_ValoresRegistro]
+	85 -- 136
+	137 [label=5]
+	136 -- 137
+	138 [label=","]
+	136 -- 138
+	139 [label="\"Frijol\""]
+	136 -- 139
+	140 [label=","]
+	136 -- 140
+	141 [label=10.50]
+	136 -- 141
+	142 [label=","]
+	136 -- 142
+	143 [label=20.00]
+	136 -- 143
+	144 [label=","]
+	136 -- 144
+	145 [label=1]
+	136 -- 145
+	146 [label="}"]
+	85 -- 146
+	147 [label="{"]
+	85 -- 147
+	148 [label=Lista_ValoresRegistro]
+	85 -- 148
+	149 [label=6]
+	148 -- 149
+	150 [label=","]
+	148 -- 150
+	151 [label="\"Azucar\""]
+	148 -- 151
+	152 [label=","]
+	148 -- 152
+	153 [label=13.00]
+	148 -- 153
+	154 [label=","]
+	148 -- 154
+	155 [label=16.00]
+	148 -- 155
+	156 [label=","]
+	148 -- 156
+	157 [label=3]
+	148 -- 157
+	158 [label="}"]
+	85 -- 158
+	159 [label="{"]
+	85 -- 159
+	160 [label=Lista_ValoresRegistro]
+	85 -- 160
+	161 [label=7]
+	160 -- 161
+	162 [label=","]
+	160 -- 162
+	163 [label="\"Carton de Huevos\""]
+	160 -- 163
+	164 [label=","]
+	160 -- 164
+	165 [label=15.00]
+	160 -- 165
+	166 [label=","]
+	160 -- 166
+	167 [label=18.00]
+	160 -- 167
+	168 [label=","]
+	160 -- 168
+	169 [label=2]
+	160 -- 169
+	170 [label="}"]
+	85 -- 170
+	171 [label="{"]
+	85 -- 171
+	172 [label=Lista_ValoresRegistro]
+	85 -- 172
+	173 [label=8]
+	172 -- 173
+	174 [label=","]
+	172 -- 174
+	175 [label="\"Sal en libra\""]
+	172 -- 175
+	176 [label=","]
+	172 -- 176
+	177 [label=14.00]
+	172 -- 177
+	178 [label=","]
+	172 -- 178
+	179 [label=16.00]
+	172 -- 179
+	180 [label=","]
+	172 -- 180
+	181 [label=4]
+	172 -- 181
+	182 [label="}"]
+	85 -- 182
+	183 [label="{"]
+	85 -- 183
+	184 [label=Lista_ValoresRegistro]
+	85 -- 184
+	185 [label=9]
+	184 -- 185
+	186 [label=","]
+	184 -- 186
+	187 [label="\"Consome\""]
+	184 -- 187
+	188 [label=","]
+	184 -- 188
+	189 [label=10.50]
+	184 -- 189
+	190 [label=","]
+	184 -- 190
+	191 [label=20.00]
+	184 -- 191
+	192 [label=","]
+	184 -- 192
+	193 [label=6]
+	184 -- 193
+	194 [label="}"]
+	85 -- 194
+	195 [label="{"]
+	85 -- 195
+	196 [label=Lista_ValoresRegistro]
+	85 -- 196
+	197 [label=10]
+	196 -- 197
+	198 [label=","]
+	196 -- 198
+	199 [label="\"Arroz\""]
+	196 -- 199
+	200 [label=","]
+	196 -- 200
+	201 [label=13.00]
+	196 -- 201
+	202 [label=","]
+	196 -- 202
+	203 [label=16.00]
+	196 -- 203
+	204 [label=","]
+	196 -- 204
+	205 [label=0]
+	196 -- 205
+	206 [label="}"]
+	85 -- 206
+	207 [label="{"]
+	85 -- 207
+	208 [label=Lista_ValoresRegistro]
+	85 -- 208
+	209 [label=11]
+	208 -- 209
+	210 [label=","]
+	208 -- 210
+	211 [label="\"Cafe en sobre\""]
+	208 -- 211
+	212 [label=","]
+	208 -- 212
+	213 [label=15.00]
+	208 -- 213
+	214 [label=","]
+	208 -- 214
+	215 [label=18.00]
+	208 -- 215
+	216 [label=","]
+	208 -- 216
+	217 [label=0]
+	208 -- 217
+	218 [label="}"]
+	85 -- 218
+	219 [label="{"]
+	85 -- 219
+	220 [label=Lista_ValoresRegistro]
+	85 -- 220
+	221 [label=12]
+	220 -- 221
+	222 [label=","]
+	220 -- 222
+	223 [label="\"1/2 litro de agua pura\""]
+	220 -- 223
+	224 [label=","]
+	220 -- 224
+	225 [label=14.00]
+	220 -- 225
+	226 [label=","]
+	220 -- 226
+	227 [label=16.00]
+	220 -- 227
+	228 [label=","]
+	220 -- 228
+	229 [label=4]
+	220 -- 229
+	230 [label="}"]
+	85 -- 230
+	80 -- 81
+	79 -- 80
+	231 [label=LISTAINSTRUCCIONES]
+	232 [label=INSTRUCCION]
+	233 [label=INS_IMPRIMIRLN]
+	234 [label=imprimirln]
+	235 [label="("]
+	236 [label=expresion]
+	237 [label=literal]
+	238 [label="***** ***** ***** Conteo ***** ***** *****"]
+	237 -- 238
+	236 -- 237
+	239 [label=")"]
+	240 [label=";"]
+	233 -- 234
+	233 -- 235
+	233 -- 236
+	233 -- 239
+	233 -- 240
+	232 -- 233
+	231 -- 232
+	241 [label=LISTAINSTRUCCIONES]
+	242 [label=INSTRUCCION]
+	243 [label=INS_CONTEO]
+	244 [label=conteo]
+	245 [label="("]
+	246 [label=")"]
+	247 [label=";"]
+	243 -- 244
+	243 -- 245
+	243 -- 246
+	243 -- 247
+	242 -- 243
+	241 -- 242
+	248 [label=LISTAINSTRUCCIONES]
+	249 [label=INSTRUCCION]
+	250 [label=INS_IMPRIMIRLN]
+	251 [label=imprimirln]
+	252 [label="("]
+	253 [label=expresion]
+	254 [label=literal]
+	255 [label="/***** ***** ***** Promedio ***** ***** *****"]
+	254 -- 255
+	253 -- 254
+	256 [label=")"]
+	257 [label=";"]
+	250 -- 251
+	250 -- 252
+	250 -- 253
+	250 -- 256
+	250 -- 257
+	249 -- 250
+	248 -- 249
+	258 [label=LISTAINSTRUCCIONES]
+	259 [label=INSTRUCCION]
+	260 [label=INS_PROMEDIO]
+	261 [label=promedio]
+	262 [label="("]
+	263 [label=expresion]
+	264 [label=literal]
+	265 [label="\"stock\""]
+	266 [label=")"]
+	267 [label=";"]
+	260 -- 261
+	260 -- 262
+	260 -- 263
+	260 -- 266
+	260 -- 267
+	263 -- 264
+	264 -- 265
+	259 -- 260
+	258 -- 259
+	268 [label=LISTAINSTRUCCIONES]
+	269 [label=INSTRUCCION]
+	270 [label=INS_IMPRIMIRLN]
+	271 [label=imprimirln]
+	272 [label="("]
+	273 [label=expresion]
+	274 [label=literal]
+	275 [label="***** ***** ***** Datos ***** ***** *****"]
+	274 -- 275
+	273 -- 274
+	276 [label=")"]
+	277 [label=";"]
+	270 -- 271
+	270 -- 272
+	270 -- 273
+	270 -- 276
+	270 -- 277
+	269 -- 270
+	268 -- 269
+	278 [label=LISTAINSTRUCCIONES]
+	279 [label=INSTRUCCION]
+	280 [label=INS_DATOS]
+	281 [label=datos]
+	282 [label="("]
+	283 [label=")"]
+	284 [label=";"]
+	280 -- 281
+	280 -- 282
+	280 -- 283
+	280 -- 284
+	279 -- 280
+	278 -- 279
+	285 [label=LISTAINSTRUCCIONES]
+	286 [label=INSTRUCCION]
+	287 [label=INS_IMPRIMIRLN]
+	288 [label=imprimirln]
+	289 [label="("]
+	290 [label=expresion]
+	291 [label=literal]
+	292 [label="***** ***** ***** Sumar ***** ***** *****"]
+	291 -- 292
+	290 -- 291
+	293 [label=")"]
+	294 [label=";"]
+	287 -- 288
+	287 -- 289
+	287 -- 290
+	287 -- 293
+	287 -- 294
+	286 -- 287
+	285 -- 286
+	295 [label=LISTAINSTRUCCIONES]
+	296 [label=INSTRUCCION]
+	297 [label=INS_SUMA]
+	298 [label=sumar]
+	299 [label="("]
+	300 [label=expresion]
+	301 [label=literal]
+	302 [label="\"stock\""]
+	303 [label=")"]
+	304 [label=";"]
+	297 -- 298
+	297 -- 299
+	297 -- 300
+	297 -- 303
+	297 -- 304
+	300 -- 301
+	301 -- 302
+	296 -- 297
+	295 -- 296
+	305 [label=LISTAINSTRUCCIONES]
+	306 [label=INSTRUCCION]
+	307 [label=INS_IMPRIMIRLN]
+	308 [label=imprimirln]
+	309 [label="("]
+	310 [label=expresion]
+	311 [label=literal]
+	312 [label="***** ***** ***** Maximo ***** ***** *****"]
+	311 -- 312
+	310 -- 311
+	313 [label=")"]
+	314 [label=";"]
+	307 -- 308
+	307 -- 309
+	307 -- 310
+	307 -- 313
+	307 -- 314
+	306 -- 307
+	305 -- 306
+	315 [label=LISTAINSTRUCCIONES]
+	316 [label=INSTRUCCION]
+	317 [label=INS_MAX]
+	318 [label=max]
+	319 [label="("]
+	320 [label=expresion]
+	321 [label=literal]
+	322 [label="\"precio_venta\""]
+	323 [label=")"]
+	324 [label=";"]
+	317 -- 318
+	317 -- 319
+	317 -- 320
+	317 -- 323
+	317 -- 324
+	320 -- 321
+	321 -- 322
+	316 -- 317
+	315 -- 316
+	325 [label=LISTAINSTRUCCIONES]
+	326 [label=INSTRUCCION]
+	327 [label=INS_IMPRIMIRLN]
+	328 [label=imprimirln]
+	329 [label="("]
+	330 [label=expresion]
+	331 [label=literal]
+	332 [label="***** ***** ***** Minimo ***** ***** *****"]
+	331 -- 332
+	330 -- 331
+	333 [label=")"]
+	334 [label=";"]
+	327 -- 328
+	327 -- 329
+	327 -- 330
+	327 -- 333
+	327 -- 334
+	326 -- 327
+	325 -- 326
+	335 [label=LISTAINSTRUCCIONES]
+	336 [label=INSTRUCCION]
+	337 [label=INS_MIN]
+	338 [label=min]
+	339 [label="("]
+	340 [label=expresion]
+	341 [label=literal]
+	342 [label="\"precio_compra\""]
+	343 [label=")"]
+	344 [label=";"]
+	337 -- 338
+	337 -- 339
+	337 -- 340
+	337 -- 343
+	337 -- 344
+	340 -- 341
+	341 -- 342
+	336 -- 337
+	335 -- 336
+	345 [label=LISTAINSTRUCCIONES]
+	346 [label=Epsilon]
+	345 -- 346
+	335 -- 345
+	325 -- 335
+	315 -- 325
+	305 -- 315
+	295 -- 305
+	285 -- 295
+	278 -- 285
+	268 -- 278
+	258 -- 268
+	248 -- 258
+	241 -- 248
+	231 -- 241
+	79 -- 231
+	69 -- 79
+	59 -- 69
+	49 -- 59
+	32 -- 49
+	22 -- 32
+	12 -- 22
+	2 -- 12
+	1 -- 2
+}
