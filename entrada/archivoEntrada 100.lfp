@@ -13,6 +13,7 @@ Claves = [
 "codigo","producto","precio_compra","precio_venta","tipo","proveedor","stock","codigo_pais_origen","productos_por_unidad"
 ]
 
+
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -126,7 +127,6 @@ Registros = [
 { 100, "Bitwolf" ,73.99,77.41, "Tools","Katz",91,"Russia",58 }
 ]
 
-
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -143,8 +143,6 @@ imprimirln("");
 imprimirln("");
 
 
-
-
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -159,7 +157,6 @@ imprimirln("GENERANDO DATOS...");
 datos();
 imprimirln("");
 imprimirln("");
-
 
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
@@ -181,7 +178,6 @@ imprimirln("Total del precio de venta con una unidad por producto es:");
 sumar("precio_venta");
 imprimirln("");
 imprimirln("");
-
 
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
@@ -225,6 +221,7 @@ min("precio_venta");
 imprimirln("");
 imprimirln("");
 
+
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -245,7 +242,6 @@ imprimirln("El promedio del precio de venta es:");
 promedio("precio_venta");
 imprimirln("");
 imprimirln("");
-
 
 
 

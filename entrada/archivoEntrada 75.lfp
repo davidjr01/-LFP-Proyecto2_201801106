@@ -1,4 +1,4 @@
-
+# ----- ----- ----- ----- Claves ----- ----- ----- -----
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -13,6 +13,7 @@ Claves = [
 "codigo","producto","precio_compra","precio_venta","tipo","proveedor","stock","codigo_pais_origen","productos_por_unidad"
 ]
 
+# ----- ----- ----- ----- Registros ----- ----- ----- -----
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -99,34 +100,9 @@ Registros = [
 { 73, "Stim" ,31.9,76.21, "Jewelry","Yakidoo",51,"Peru",86 }
 { 74, "Greenlam" ,92.45,70.72, "Shoes","Fatz",66,"Japan",47 }
 { 75, "Rank" ,81.68,73.8, "Grocery","Photofeed",38,"Colombia",87 }
-{ 76, "Zoolab" ,78.68,61.83, "Outdoors","Jetpulse",71,"Peru",72 }
-{ 77, "Tempsoft" ,25.44,52.04, "Shoes","Livetube",85,"Czech Republic",100 }
-{ 78, "Sonsing" ,15.79,57.92, "Tools","Avamm",28,"Burundi",42 }
-{ 79, "Cardify" ,5.44,22.8, "Automotive","Wikizz",93,"Indonesia",28 }
-{ 80, "Keylex" ,44.42,31.89, "Automotive","Kamba",90,"Kazakhstan",20 }
-{ 81, "Sub" ,78.04,86.4, "Electronics","Blogtag",58,"Ukraine",43 }
-{ 82, "Otcom" ,7.48,37.7, "Home","Devpoint",59,"Poland",23 }
-{ 83, "Bytecard" ,11.63,70.28, "Garden","Meemm",93,"Albania",90 }
-{ 84, "Y" ,17.61,2.54, "Electronics","Wikizz",71,"Afghanistan",10 }
-{ 85, "Job" ,97.83,63.76, "Health","Nlounge",61,"Iran",37 }
-{ 86, "Fixflex" ,17.93,33.86, "Clothing","Dabtype",38,"Madagascar",86 }
-{ 87, "Veribet" ,71.13,47.55, "Toys","Lazz",47,"France",79 }
-{ 88, "Wrapsafe" ,97.94,2.14, "Electronics","Tazzy",82,"Egypt",16 }
-{ 89, "Lotlux" ,74.57,29.76, "Tools","Dablist",74,"China",45 }
-{ 90, "Mat"  ,27.57,21.92, "Toys","Tagtune",27,"Montenegro",18 }
-{ 91, "Prodder" ,91.24,8.83, "Industrial","Talane",71,"Philippines",56 }
-{ 92, "Viva" ,88.31,83.27, "Music","Plajo",37,"Philippines",29 }
-{ 93, "Cardify" ,84.42,99.9, "Health","Dabvine",37,"Japan",95 }
-{ 94, "Flexidy" ,34.74,84.38, "Movies","Yabox",59,"Russia",27 }
-{ 95, "Tresom" ,96.23,75.56, "Clothing","Linktype",60,"Philippines",4 }
-{ 96, "Bitchip" ,71.84,42.48, "Jewelry","Lazzy",34,"China",96 }
-{ 97, "Zoolab" ,72.39,2.6, "Computers","Viva",68,"Sweden",7 }
-{ 98, "Domainer" ,92.0,11.23, "Toys","Edgetag",50,"Egypt",89 }
-{ 99, "Konklux" ,81.6,53.06, "Industrial","Centimia",7,"Thailand",19 }
-{ 100, "Bitwolf" ,73.99,77.41, "Tools","Katz",91,"Russia",58 }
 ]
 
-
+# ----- ----- ----- ----- Conteo ----- ----- ----- -----
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -142,9 +118,35 @@ conteo();
 imprimirln("");
 imprimirln("");
 
+# ----- ----- ----- ----- Contar Si ----- ----- ----- -----
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Instruccion contarsi");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("");
+imprimir("La cantidad de registros con stock 0 es:");
+contarsi("stock", 0);
+imprimirln("");
+imprimir("La cantidad de registros con stock 1 es:");
+contarsi("stock", 1);
+imprimirln("");
+imprimir("La cantidad de registros con stock 2 es:");
+contarsi("stock", 2);
+imprimirln("");
+imprimir("La cantidad de registros con stock 3 es:");
+contarsi("stock", 3);
+imprimirln("");
+imprimir("La cantidad de registros con stock 4 es:");
+contarsi("stock", 4);
+imprimirln("");
+imprimirln("");
 
-
-
+# ----- ----- ----- ----- Datos ----- ----- ----- -----
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -160,7 +162,7 @@ datos();
 imprimirln("");
 imprimirln("");
 
-
+# ----- ----- ----- ----- Sumar ----- ----- ----- -----
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -182,7 +184,7 @@ sumar("precio_venta");
 imprimirln("");
 imprimirln("");
 
-
+# ----- ----- ----- ----- Maximos ----- ----- ----- -----
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -204,6 +206,7 @@ max("precio_venta");
 imprimirln("");
 imprimirln("");
 
+# ----- ----- ----- ----- Minimos ----- ----- ----- -----
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -225,6 +228,7 @@ min("precio_venta");
 imprimirln("");
 imprimirln("");
 
+# ----- ----- ----- ----- Promedio ----- ----- ----- -----
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimirln("***** ***** ***** ***** ***** *****");
 imprimir("*****");
@@ -246,7 +250,20 @@ promedio("precio_venta");
 imprimirln("");
 imprimirln("");
 
-
-
+# ----- ----- ----- ----- Exportando Reporte ----- ----- ----- -----
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Instruccion Exportar Reporte");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("");
+imprimirln("Exportando reporte a archivo html...");
+exportarReporte("Inventario de tienda de tecnologia EBEN-EZER xD jaja");
+imprimirln("");
+imprimirln("");
 
 imprimirln("FIN DEL ARCHIVO...");

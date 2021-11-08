@@ -57,7 +57,7 @@ def btAnalizar():
     scanner = AnalizadorLexico()
     listaTokens=scanner.analizar(codigo2)
     listaD=listaTokens
-    #scanner.imprimirToken()
+    scanner.imprimirToken()
     parser = AnalizadorSintactico()
     parser.analizar(listaTokens)
     asdf=Debugg()

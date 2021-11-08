@@ -1,0 +1,160 @@
+
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Guardando Claves");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+
+Claves = [
+"codigo","producto","precio_compra","precio_venta","tipo","proveedor","stock","codigo_pais_origen","productos_por_unidad"
+]
+
+
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Guardando Registros");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+
+Registros = [
+{ 1, "Greenlam" ,24.29,52.72, "Books","Brightbean",50,"Czech Republic",32 }
+{ 2, "Zontrax" ,16.88,28.66, "Movies","Skibox",68,"China",77 }
+{ 3, "Tres" ,88.79,71.35, "Computers","Photojam",68,"Indonesia",1 }
+{ 4, "Hatity" ,48.02,15.84, "Tools","Tagchat",25,"France",23 }
+{ 5, "Keylex" ,90.79,66.24, "Shoes","Divanoodle",20,"Indonesia",45 }
+{ 6, "Flowdesk" ,40.66,51.76, "Tools","Skidoo",76,"Indonesia",25 }
+{ 7, "Lotstring" ,87.82,26.98, "Toys","Voolith",38,"Indonesia",6 }
+{ 8, "Bitwolf" ,99.24,80.63, "Garden","Wordpedia",45,"Poland",15 }
+{ 9, "Opela" ,63.52,46.74, "Clothing","Thoughtbridge",34,"Indonesia",66 }
+{ 10, "It" ,65.19,30.96, "Home","Minyx",48,"Portugal",93 }
+]
+
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Instruccion Conteo");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("");
+imprimirln("La cantidad de registros es:");
+conteo();
+imprimirln("");
+imprimirln("");
+
+
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Instruccion Datos");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("");
+imprimirln("GENERANDO DATOS...");
+datos();
+imprimirln("");
+imprimirln("");
+
+
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Instruccion Sumar");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("");
+imprimirln("La cantidad de productos totales son:");
+sumar("stock");
+imprimirln("");
+imprimirln("Total del precio de compra con una unidad por producto es:");
+sumar("precio_compra");
+imprimirln("");
+imprimirln("Total del precio de venta con una unidad por producto es:");
+sumar("precio_venta");
+imprimirln("");
+imprimirln("");
+
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Instruccion Maximos");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("");
+imprimirln("La cantidad del producto con mas stock que hay es:");
+max("stock");
+imprimirln("");
+imprimirln("El precio del producto con el precio de compra mas alto es:");
+max("precio_compra");
+imprimirln("");
+imprimirln("El precio del producto con el precio de venta mas alto es:");
+max("precio_venta");
+imprimirln("");
+imprimirln("");
+
+
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Instruccion Minimos");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("");
+imprimirln("La cantidad del producto con mas stock que hay es:");
+min("stock");
+imprimirln("");
+imprimirln("El precio del producto con el precio de compra mas alto es:");
+min("precio_compra");
+imprimirln("");
+imprimirln("El precio del producto con el precio de venta mas alto es:");
+min("precio_venta");
+imprimirln("");
+imprimirln("");
+
+
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimir("*****");
+imprimir("***** ");
+imprimir("Instruccion Promedio");
+imprimir(" *****");
+imprimirln("*****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("***** ***** ***** ***** ***** *****");
+imprimirln("");
+imprimirln("El promedio de productos en stock que hay es:");
+promedio("stock");
+imprimirln("");
+imprimirln("El promedio del precio de compra es:");
+promedio("precio_compra");
+imprimirln("");
+imprimirln("El promedio del precio de venta es:");
+promedio("precio_venta");
+imprimirln("");
+imprimirln("");
+
+
+
+imprimirln("FIN DEL ARCHIVO...");
